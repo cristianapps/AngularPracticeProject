@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="image">
+        <img src="https://www.seekpng.com/png/full/1-12701_free-png-rubiks-cube-png-images-transparent-rubiks.png"
+          alt="">
+      </div>
+    </div>
+    <div class="col-md-7">
+      <h1>About Us title</h1>
+      <button class="btn btn-sm btn-warning" (click)="toggleShow()">More
+        details</button><br><br>
+      <div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="isShownAlert"><strong>You can't
+          order yet!</strong> Please login first.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum erat eu nibh cursus, quis dictum
+        orci
+        ultricies. Nullam neque velit, vestibulum id elit quis, vestibulum maximus ipsum. Integer at massa risus. Etiam
+        malesuada massa dui, quis imperdiet nulla rhoncus ut. Curabitur et sem eget mauris hendrerit rhoncus sed non
+        sapien. Suspendisse ullamcorper ornare arcu, vehicula mollis massa condimentum id. Pellentesque a pellentesque
+        sapien. Vivamus odio ligula, pretium et consectetur in, volutpat nec nibh. Donec tortor velit, eleifend
+        elementum tortor nec, blandit vestibulum ante.</p>
+      <p>Integer purus arcu, suscipit fringilla lacinia ut, dictum in nulla. Suspendisse sed
+        ultricies leo. Praesent
+        tincidunt consectetur sapien vitae dignissim. Phasellus placerat hendrerit sem non interdum. Nulla non sagittis
+        leo. Sed suscipit felis porttitor metus sagittis tempus. In mollis diam sit amet quam blandit, eu sollicitudin
+        justo accumsan. Nunc vitae blandit mauris. Sed quis diam in enim dapibus fringilla a iaculis nulla. Proin
+        suscipit arcu et
+        turpis pharetra viverra. Duis ut felis nulla. Ut urna neque, facilisis non euismod nec, cursus at velit. Ut nec
+        pellentesque lacus. Nunc fermentum orci a ultricies tincidunt.</p>
+
+      <app-about-details [isDisplayed]="isDisplayed" (showAlert)="toggleShowAlert()">
+
+      </app-about-details>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<app-header></app-header>
+
+<div class="main" [ngClass]="{'about-wrapper':router.url==='/about'}">
+  <div *ngIf="router.url==='/about'">
+    <app-intro></app-intro>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+
+<app-footer></app-footer>

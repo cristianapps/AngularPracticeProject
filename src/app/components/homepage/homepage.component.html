@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="image">
+        <img src="https://www.pinclipart.com/picdir/big/298-2981725_tux-logo-linux-free-download-png-hq-clipart.png"
+          alt="">
+      </div>
+    </div>
+    <div class="col-md-7">
+      <h1>{{ 'MainArticle.title' | translate }}</h1>
+      <strong>{{ 'MainArticle.intro'| translate }}</strong><br><br>
+      <p>{{ 'MainArticle.text' | translate}}</p>
+      <div class="price main">
+        <span *ngIf="isShown">{{ convert_price | currency:'USD'}}</span>&nbsp;
+        <span>{{ first_price | currency:'EUR'}}</span>
+      </div>
+      <button class="btn btn-success" (click)="togglePrice()">Convert</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h2>{{ SubArticle1.title | translate}}
+        <span class="price">{{ first_price | currency:'GBP'}}</span>
+        <span class="price">{{ convert_price | currency:'USD'}}</span>
+      </h2>
+      <p>{{ SubArticle1.text }}</p>
+    </div>
+    <div class="col-md-4">
+      <h2>{{ SubArticle2.title | translate}}
+        <span class="price">{{ second_price | currency:'EUR'}}</span>
+      </h2>
+      <p>{{ SubArticle2.text }}</p>
+    </div>
+    <div class="col-md-4">
+      <h2>{{ SubArticle3.title | translate}}
+        <span class="price">{{ third_price | currency:'USD'}}</span>
+      </h2>
+      <p>{{ SubArticle3.text }}</p>
+    </div>
+
+    <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+      <!-- This is the tree node template for leaf nodes -->
+      <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+        <!-- use a disabled button to provide padding for tree leaf -->
+        <!-- <button mat-icon-button disabled></button> -->
+        <mat-checkbox [checked]="true">{{node.name}}
+        </mat-checkbox>
+      </mat-tree-node>
+      <!-- This is the tree node template for expandable nodes -->
+      <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+        {{node.name}}
+        <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
+          <mat-icon class="mat-icon-rtl-mirror">
+            {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+          </mat-icon>
+        </button>
+      </mat-tree-node>
+    </mat-tree>
+
+  </div>
+</div>

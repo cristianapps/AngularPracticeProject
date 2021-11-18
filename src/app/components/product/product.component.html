@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="image">
+        <img src="https://www.pinclipart.com/picdir/big/298-2981725_tux-logo-linux-free-download-png-hq-clipart.png"
+          alt="">
+      </div>
+      <br><br>
+      <!-- <mat-tab-group>
+        <mat-tab label="{{paper.name}}" *ngFor="let paper of papers$">
+          {{paper.description }} </mat-tab>
+      </mat-tab-group> -->
+    </div>
+    <div class="col-md-7">
+      <h1>Product detail title</h1>
+      <div class="price main">
+        <span>{{ convert_price | currency:'USD'}}</span>&nbsp;
+        <span>{{ first_price | currency:'EUR'}}</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum erat eu nibh cursus, quis dictum
+        orci
+        ultricies. Nullam neque velit, vestibulum id elit quis, vestibulum maximus ipsum. Integer at massa risus. Etiam
+        malesuada massa dui, quis imperdiet nulla rhoncus ut. Curabitur et sem eget mauris hendrerit rhoncus sed non
+        sapien. Suspendisse ullamcorper ornare arcu, vehicula mollis massa condimentum id. Pellentesque a pellentesque
+        sapien. Vivamus odio ligula, pretium et consectetur in, volutpat nec nibh. Donec tortor velit, eleifend
+        elementum tortor nec, blandit vestibulum ante.</p>
+      <button class="btn btn-danger" (click)="displayMessage()">Details</button>
+      <br><br>
+      <div class="comments-wrapper">
+
+        <h4>Comments</h4>
+        <form [formGroup]="commentForm" (ngSubmit)="SaveData()">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Comment title" formControlName="title" />
+            <div class="error-message"
+              *ngIf="commentForm.get('title').invalid && (commentForm.get('title').dirty || commentForm.get('title').touched)">
+              Insert a title
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="User name" formControlName="author" />
+            <div class="error-message"
+              *ngIf="commentForm.get('author').invalid && (commentForm.get('author').dirty || commentForm.get('author').touched)">
+              Insert an user name
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Comment message" formControlName="content" />
+          </div>
+          <button type="submit" class="btn btn-success" [disabled]="commentForm.invalid">Post comment</button>
+        </form>
+        <br>
+        <div *ngIf="message" class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Thanks for posting!</strong> Your comment is now displayed!
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div *ngIf="isDisplayed" class="editContainer">
+          <form [formGroup]="commentEditForm" (ngSubmit)="UpdateData()">
+            <div class=" form-group">
+              <input type="text" class="form-control" placeholder="Comment title" formControlName="title" />
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="User name" formControlName="author" />
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Comment message" formControlName="content" />
+            </div>
+            <button type="submit" class="btn btn-success">Edit
+              comment</button>
+            &nbsp;
+            <button class="btn btn-danger" (click)="toggleShow()">Close</button>
+          </form>
+        </div>
+        <br>
+        <div class="comments-list">
+          <ul>
+            <li *ngFor="let comment of comments$">
+              <div style="display: none">{{comment.id }}</div>
+              <div class="title">{{ comment.title }}</div>
+              <div class="author">{{ comment.author }}</div>
+              <div class="content">{{ comment.content }}</div>
+              <span class="close" (click)="deleteComment(comment.id)">&#9746;</span>
+              <a routerLink="/product/{{comment.id}}" (dblclick)="toggleShow()" click="location.reload()"
+                class="edit">&#9851;</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

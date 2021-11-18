@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 40px;
+  margin: 20px 0;
+}
+h2 {
+  font-size: 28px;
+  line-height: 38px;
+  margin: 20px 0;
+}
+
+.image {
+  width: 100%;
+  max-height: auto;
+  img {
+    width: 75%;
+    height: auto;
+  }
+}
+
+.price {
+  display: block;
+  font-size: 16px;
+  &.main {
+    font-size: 24px;
+  }
+}

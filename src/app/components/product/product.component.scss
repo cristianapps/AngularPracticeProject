@@ -1,0 +1,55 @@
+.comments-wrapper {
+  margin-bottom: 25px;
+  .form-group {
+    margin-bottom: 15px;
+    margin-bottom: 20px;
+    .error-message {
+      color: red;
+    }
+  }
+  .comments-list {
+    padding: 25px;
+    background-color: #f8f8f8;
+    .title {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .author {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    .content {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    ul {
+      li {
+        position: relative;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ccc;
+        .close {
+          position: absolute;
+          top: 0px;
+          right: 10px;
+          font-size: 24px;
+          cursor: pointer;
+        }
+        .edit {
+          position: absolute;
+          top: 8px;
+          right: 40px;
+          font-size: 16px;
+          cursor: pointer;
+          text-decoration: none;
+          color: #333;
+        }
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}

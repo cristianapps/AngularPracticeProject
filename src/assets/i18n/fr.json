@@ -1,0 +1,48 @@
+{
+  "Menu": {
+    "home": "Page d'accueil",
+    "about": "À propos de nous",
+    "product": "Produit",
+    "contact": "Contact"
+  },
+  "MainArticle": {
+    "title": "Traduire un titre simple et une introduction",
+    "intro": "Nous créons maintenant nos fichiers de traduction dans le dossier assets/i18n: ",
+    "text": "Dans app.component.html, nous ajoutons un en-tête avec la traduction Directive à l'intérieur de la balise.    Cette directive prendra le texte à l'intérieur de la balise et le remplacera par la traduction correspondante. Si vous utilisez la directive, vous devez vous assurer qu'il n'y a rien d'autre à l'intérieur de la balise que le texte."
+  },
+  "HOME": {
+    "SUBARTICLE": {
+      "title1": "Premier titre",
+      "title2": "Deuxième titre",
+      "title3": "Troisième titre"
+    }
+  },
+  "CONTACT": {
+    "contact": "Contact",
+    "firstName": "Prénom",
+    "lastName": "Nom de famille",
+    "phoneNumber": "Numéro de téléphone",
+    "emailAddress": "Adresse e-mail",
+    "position": "Le poste",
+    "checkWebsite": "Avez-vous un site internet?",
+    "website": "Site internet",
+    "send": "Envoyer des données",
+    "LABEL": {
+      "sendButton": "Bouton Envoyer les données du formulaire"
+    },
+    "ERROR": {
+      "firstName": "Veuillez indiquer un prénom!",
+      "lastName": "Veuillez fournir un nom de famille!",
+      "phoneNumber": "Veuillez fournir un numéro de téléphone!",
+      "emailAddress": "Veuillez fournir une adresse email valide"
+    },
+    "SELECT": {
+      "manager": "Directeur",
+      "employee": "Employé(e)",
+      "freelancer": "Indépendant(e)"
+    }
+  },
+  "paper": {
+    "name": "Les amntiri de copilarie"
+  }
+}

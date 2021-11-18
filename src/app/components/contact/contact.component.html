@@ -1,0 +1,96 @@
+<div class="container">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
+    <div class="row">
+      <h1 class="text-center">{{ "CONTACT.contact" | translate }}</h1>
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label class="form-label">{{ "CONTACT.firstName" | translate }}</label>
+          <input type="text" class="form-control" formControlName="firstName" />
+          <div class="error-message"
+            *ngIf="contactForm.get('firstName').invalid && (contactForm.get('firstName').dirty || contactForm.get('firstName').touched)">
+            {{ "CONTACT.ERROR.firstName" | translate }}
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">{{ "CONTACT.lastName" | translate }}</label>
+          <input type="text" class="form-control" formControlName="lastName" />
+          <div class="error-message"
+            *ngIf="contactForm.get('lastName').invalid && (contactForm.get('lastName').dirty || contactForm.get('lastName').touched)">
+            {{ "CONTACT.ERROR.lastName" | translate }}
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">{{ "CONTACT.phoneNumber" | translate }}</label>
+          <input type="number" class="form-control" formControlName="phoneNumber" />
+          <div class="error-message"
+            *ngIf="contactForm.get('phoneNumber').invalid && (contactForm.get('phoneNumber').dirty || contactForm.get('phoneNumber').touched)">
+            {{ "CONTACT.ERROR.phoneNumber" | translate }}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label class="form-label" for="#emailAddressId">{{ "CONTACT.emailAddress" | translate }}</label>
+          <input type="email" id="emailAddressId" class="form-control" formControlName="emailAddress" />
+          <div class="error-message"
+            *ngIf="contactForm.get('emailAddress').invalid && (contactForm.get('emailAddress').dirty || contactForm.get('emailAddress').touched)">
+            {{ "CONTACT.ERROR.emailAddress" | translate }}
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">{{ "CONTACT.position" | translate }}</label>
+          <select class="form-select" aria-label="Position" formControlName="selectPosition">
+            <option *ngFor="let position of positions" [value]="position | translate">
+              {{ position | translate }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-check">
+          <br>
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" (click)="toggleShow()"
+            formControlName="acceptNotifications">
+          <label class="form-check-label" for="flexCheckDefault">
+            {{ "CONTACT.checkWebsite" | translate }}
+          </label>
+        </div>
+        <br>
+        <div *ngIf="isShown">
+          <div class="form-group">
+            <label class="form-label">{{ "CONTACT.website" | translate }}</label>
+            <input type="text" class="form-control" formControlName="httpAddress" />
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <div class="text-center">
+      <br>
+      <button type="submit" [disabled]="contactForm.invalid" title="{{ 'CONTACT.LABEL.sendButton' | translate }}"
+        class="btn btn-success" (click)="toggleShowAlert()">{{"CONTACT.send" | translate }}</button>
+      <br><br>
+      <div *ngIf="!isShownAlert"><strong>Fill in all required data and send us an email!</strong></div>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="isShownAlert">
+        <strong>Your data have been sent!</strong> We are going to contact you as soon as is possible.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <h2>Teams</h2>
+      <table class="table" style="text-align:left">
+        <thead>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let team of teams$">
+            <td>{{team.id}}</td>
+            <td>{{team.name}}</td>
+            <td>{{team.description}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </form>
+</div>

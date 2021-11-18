@@ -1,0 +1,53 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "name": "FC Barcelona",
+      "coach": "Ernesto Valverde",
+      "description": "The best football team in the world!"
+    },
+    {
+      "id": 2,
+      "name": "Real Madrid",
+      "coach": "Zinedine Zidane",
+      "description": "The worst football team in the world!"
+    }
+  ],
+  "papers": [
+    {
+      "id": 1,
+      "name": "Amintiri din copilarie",
+      "description": "Romanul copilului etern"
+    },
+    {
+      "id": 2,
+      "name": "Mizerabilii",
+      "description": "Cel mai cunoscut roman scris de Victor Hugo"
+    },
+    {
+      "id": 3,
+      "name": "Papillon",
+      "description": "Aventurile unui detinut in Guyana Franceza"
+    }
+  ],
+  "comments": [
+    {
+      "title": "Cel mai bun produs!!!",
+      "author": "Dromiketes!",
+      "content": "E beton!",
+      "id": 1
+    },
+    {
+      "title": "Dezastru!",
+      "author": "Dorel Azorel",
+      "content": "Nu recomand la nimeni asemenea porcarie. Am dat banii degeaba!",
+      "id": 2
+    },
+    {
+      "title": "Cumparati cu incredere!",
+      "author": "Maricica Ionescu",
+      "content": "Am cumparat acest produs si sunt foarte multumita de el. Este cel mai bun din gama sa.",
+      "id": 3
+    }
+  ]
+}

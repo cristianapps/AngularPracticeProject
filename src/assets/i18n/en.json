@@ -1,0 +1,48 @@
+{
+  "Menu": {
+    "home": "Home",
+    "about": "About us",
+    "product": "Product",
+    "contact": "Contact"
+  },
+  "MainArticle": {
+    "title": "Translate simple title and intro",
+    "intro": "We now create our translation files inside the assets/i18n folder:",
+    "text": "In app.component.html we add a header with the translate “directive” inside the “h1” tag. This directive will take the text inside the tag and replace it with the matching translation. If you use the directive you have to make sure, that there is nothing else inside the tag but the text."
+  },
+  "HOME": {
+    "SUBARTICLE": {
+      "title1": "First title",
+      "title2": "Second title",
+      "title3": "Third title"
+    }
+  },
+  "CONTACT": {
+    "contact": "Contact",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phoneNumber": "Phone Number",
+    "emailAddress": "Email Address",
+    "position": "Position",
+    "checkWebsite": "Do you have a website?",
+    "website": "Website",
+    "send": "Send data",
+    "LABEL": {
+      "sendButton": "Send form data button"
+    },
+    "ERROR": {
+      "firstName": "Please provide a First name!",
+      "lastName": "Please provide a Last name!",
+      "phoneNumber": "Please provide a phone number!",
+      "emailAddress": "Please provide a valid email address"
+    },
+    "SELECT": {
+      "manager": "Manager",
+      "employee": "Employee",
+      "freelancer": "Freelancer"
+    }
+  },
+  "paper": {
+    "name": "Remember from childhood"
+  }
+}
